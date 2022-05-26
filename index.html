@@ -22,35 +22,37 @@
 
     <!--Header-->
     <header class="header">
-      <nav class="header-nav">
-        <a href="./index.html" class="header-logo"
-          ><span class="web">Web</span><span class="studio">Studio</span></a
-        >
-        <ul class="header-link">
-          <li class="item"><a class="studio-link-current" href="./index.html">Студия</a></li>
-          <li class="item"><a class="portfolio" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="contacts" href="./contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="container header-container">
+        <nav class="header-nav">
+          <a href="./index.html" class="header-logo"
+            ><span class="web">Web</span><span class="studio">Studio</span></a
+          >
+          <ul class="header-link">
+            <li class="item"><a class="studio-link-current" href="./index.html">Студия</a></li>
+            <li class="item"><a class="portfolio" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="contacts" href="./contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
 
-      <ul class="header-contacts">
-        <li class="item">
-          <a class="header-contact" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="item">
-          <a class="header-contact" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+        <ul class="header-contacts" style="margin-left: auto;">
+          <li class="item">
+            <a class="header-contact" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="item">
+            <a class="header-contact" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main>
       <!--Баннер-->
-      <section class="section" style="background-color: #2f303a">
-        <div class="hero">
+      <section class="section hero">
+        <div class="container">
           <h1 class="hhero">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
           <button class="order-service" type="button">Заказать услугу</button>
         </div>
@@ -97,23 +99,25 @@
       </section>
 
       <!--Чем мы занимаемся-->
-      <div class="container">
-        <h2 class="chapter">Чем мы занимаемся</h2>
-        <ul class="technics">
-          <li><img src="./images/box1.jpg" alt="десктоп" width="370" /></li>
-          <li><img src="./images/box2.jpg" alt="смартфон" width="370" /></li>
-          <li>
-            <img
-              src="./images/box3.jpg"
-              alt="мобильное устройство"
-              width="370"
-            />
-          </li>
-        </ul>
-      </div>
+      <section class="section business">
+        <div class="container">
+          <h2 class="chapter">Чем мы занимаемся</h2>
+          <ul class="technics list">
+            <li><img src="./images/box1.jpg" alt="десктоп" width="370" /></li>
+            <li><img src="./images/box2.jpg" alt="смартфон" width="370" /></li>
+            <li>
+              <img
+                src="./images/box3.jpg"
+                alt="мобильное устройство"
+                width="370"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <!--Наша команда-->
-      <section class="section">
+      <section class="section" style="background: #f5f4fa;">
         <div class="container">
          <h2 class="chapter">Наша команда</h2>
 
@@ -172,8 +176,8 @@
     </main>
 
     <!--Футер-->
-    <section class="section">
-      <footer class="footer">
+    <footer class="footer">
+      <div class="container">
         <a href="./index.html" class="footer-logo"
           ><span class="web">Web</span><span class="studio">Studio</span></a
         >
@@ -190,7 +194,7 @@
             </li>
           </ul>
         </address>
-      </footer>
-    </section>
+      </div>
+    </footer>
   </body>
 </html>

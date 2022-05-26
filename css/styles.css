@@ -4,7 +4,10 @@
   --header-link-focus: #2196f3;
   --header-contact: #757575;
   --header-contact-hover-focus: #2196f3;
-  --order-service-hover: #2196f3;
+  --order-service-hover: #188ce8;
+  --order-service-focus: #188ce8;
+  --order-service: #ffffff;
+  --order-service-background: #2196f3;
   --studio-link-current: #2196f3;
   --portfolio-current: #2196f3;
   --advantage-text: #757575;
@@ -16,8 +19,6 @@
   --products-active: #2196f3;
   --exemplum-product: #757575;
   --address-contacts-hover-focus: #2196f3;
-  --order-service: #ffffff;
-  --order-service-hover: #2196f3;
 
   --team-gap-top: 50px;
   --team-gap-left: 30px;
@@ -63,13 +64,10 @@ body {
 }
 
 .header {
-  width: 1600px;
-  height: 80px;
-
-  padding: 0 215px;
-  justify-content: space-between;
-
   border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
 }
 
 .header-nav {
@@ -82,6 +80,9 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header-logo > .web {
@@ -92,21 +93,16 @@ body {
   color: #000000;
 }
 
-.header-nav > .header-logo {
-  text-decoration: none;
-
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-
 .header-link {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
   color: var(--header-link);
-  padding-left: 93px;
+  margin-left: 93px;
 }
 
 .header-link .item:not(:last-child) {
@@ -163,10 +159,14 @@ body {
 .portfolio,
 .contacts {
   color: #212121;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-contacts {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .header-contacts .item:not(:last-child) {
@@ -174,6 +174,8 @@ body {
 }
 
 .header-contact {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -188,15 +190,15 @@ body {
 }
 
 .section {
-  width: 1600px;
   padding: 94px 0;
 }
 
 .container {
+  outline: 1px solid red;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 200px;
+  margin: 0 auto;
 }
 /* Стили для index.html */
 
@@ -212,8 +214,9 @@ body {
 /* Баннер */
 
 .hero {
+  background-color: #2f303a;
   text-align: center;
-  margin: 106px 0;
+  padding: 200px 0;
 }
 
 .hhero {
@@ -223,12 +226,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #2f303a;
   width: 696px;
   margin: 0 auto 30px;
 }
 
-.order-servise {
+.order-service {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -236,16 +238,22 @@ body {
   text-align: center;
   align-items: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--order-service);
   cursor: pointer;
-  background-color: #2196f3;
+  background: var(--order-service-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  margin: auto;
+  padding: 10px 32px;
 }
 
 .order-service:hover {
   color: var(--order-service);
   background: var(--order-service-hover);
+}
+.order-service:focus {
+  color: var(--order-service);
+  background: var(--order-service-focus);
 }
 
 /* Наши преимущества */
@@ -278,18 +286,26 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--advantage-text);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /*  Чем мы занимаемся  */
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .technics {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding: unset;
   margin-top: 50px;
-  margin-bottom: 86px;
+}
+
+img {
+  display: block;
 }
 
 /*  Наша команда  */
@@ -303,6 +319,8 @@ body {
   flex-wrap: wrap;
 
   margin-left: calc(-1 * var(--team-gap-left));
+
+  background: #f5f4fa;
 }
 
 .team > .item-team {
@@ -323,7 +341,7 @@ body {
 }
 
 .card-content {
-  padding: 24px 10px 16px;
+  padding: 30px 10px;
 }
 
 .team-photo {
@@ -343,7 +361,8 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 
-  margin-top: 4px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* Стили для portfolio.html */
@@ -354,8 +373,8 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-top: 96px;
-  margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 34px;
   padding: 0;
 }
 
@@ -381,6 +400,7 @@ body {
   border-radius: 4px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  padding: 6px 22px;
 }
 
 .products-all:hover {
@@ -516,7 +536,7 @@ body {
 }
 
 .footer {
-  padding: 60px 215px;
+  padding: 60px 0;
 
   height: 252px;
 
@@ -525,6 +545,8 @@ body {
 
 .footer-logo {
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .footer-logo > .web {
